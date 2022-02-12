@@ -27,6 +27,7 @@ FIRST_NUMBER = {
 ref = cv2.imread(args["reference"])
 ref = cv2.cvtColor(ref, cv2.COLOR_BGR2GRAY)
 ref = cv2.threshold(ref, 10, 255, cv2.THRESH_BINARY_INV)[1]
+cv2.imshow("ref", ref)
 
 # find contours in the OCR-A image and sort them from left-to-right
 refCnts = cv2.findContours(ref.copy(), cv2.RETR_EXTERNAL,
